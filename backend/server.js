@@ -48,7 +48,7 @@ app.post('/send-rcs', async (req, res) => {
 });
 
 // ── Fallback: serve React app for any unmatched route (client-side routing)
-app.get('*', (req, res) => {
+app.get('/{*path}', (req, res) => {
   res.sendFile(path.join(REACT_BUILD, 'index.html'));
 });
 
