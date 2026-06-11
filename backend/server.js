@@ -5,7 +5,15 @@ const path = require('path');
 const cors = require('cors');
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://amex-flowcode-zoqe.vercel.app',  // Vercel production
+    'http://localhost:3000',                    // local React dev
+    'http://localhost:8080',                    // local server
+  ],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+}));
 app.use(express.json());
 
 // ── Serve the React build (production)

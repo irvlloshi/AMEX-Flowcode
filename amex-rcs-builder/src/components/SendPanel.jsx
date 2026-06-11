@@ -19,6 +19,7 @@ export default function SendPanel({ steps, showToast }) {
 
     try {
       const API = process.env.REACT_APP_API_URL || 'https://amex-flowcode.onrender.com';
+      console.log('API URL:', API); // ← add this line
       const res = await fetch(`${API}/send-rcs`, {
 
         method: 'POST',
