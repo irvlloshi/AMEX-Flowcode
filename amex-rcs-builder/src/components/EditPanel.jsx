@@ -154,9 +154,9 @@ function CarouselCardEditor({ card, index, onChange, onRemove }) {
           <Field label="Image URL">
             <input style={inputStyle()} type="text" value={card.mediaUrl || ''} onChange={e => onChange('mediaUrl', e.target.value)} placeholder="https://example.com/image.jpg" />
           </Field>
-          {card.mediaUrl?.trim() && (
-            <div style={{ marginBottom: 10, borderRadius: T.radiusXs, overflow: 'hidden', height: 70 }}>
-              <img src={card.mediaUrl} alt="" style={{ width: '100%', height: 70, objectFit: 'cover' }} onError={e => e.target.style.display = 'none'} />
+        {card.mediaUrl?.trim() && (
+            <div style={{ marginBottom: 10, borderRadius: T.radiusXs, overflow: 'hidden', height: 120 }}>
+              <img src={card.mediaUrl} alt="" style={{ width: '100%', height: 120, objectFit: 'cover', borderRadius: T.radiusXs }} onError={e => e.target.style.display = 'none'} />
             </div>
           )}
           <Field label="Media Height">

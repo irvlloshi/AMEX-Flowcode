@@ -8,7 +8,7 @@ export const STEP_DEFAULTS = {
     data: {
       title: 'Watch Your Savings Work For You',
       description: 'Based on our current APY, a $10,000 deposit could earn you $435 in just one year.',
-      mediaUrl: '', mediaHeight: 'MEDIUM', orientation: 'VERTICAL',
+      mediaUrl: 'https://marcommnews.com/wp-content/uploads/2019/10/MeetGreen_PR-701x394.jpg', mediaHeight: 'MEDIUM', orientation: 'VERTICAL',
       suggestions: [
         { text: 'Apply Now', type: 'url', value: 'https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/' },
         { text: 'Change Amount', type: 'reply', value: 'change_amount' },
@@ -79,7 +79,7 @@ export const TEMPLATES = {
     data: {
       title: 'Connect with American Express',
       description: 'A specialist is ready to help you with your High Yield Savings Account.',
-      mediaUrl: '', mediaHeight: 'MEDIUM', orientation: 'VERTICAL',
+      mediaUrl: 'https://marcommnews.com/wp-content/uploads/2019/10/MeetGreen_PR-701x394.jpg', mediaHeight: 'MEDIUM', orientation: 'VERTICAL',
       suggestions: [
         { text: 'Call Us Now', type: 'dial', value: '+18005280800' },
         { text: 'Voice AI Agent', type: 'url', value: 'https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/' },
