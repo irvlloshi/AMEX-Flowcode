@@ -18,7 +18,9 @@ export default function SendPanel({ steps, showToast }) {
     showToast('📤 Sending…');
 
     try {
-      const res = await fetch('http://localhost:8080/send-rcs', {
+      const API = process.env.REACT_APP_API_URL || 'https://amex-flowcode.onrender.com';
+      const res = await fetch(`${API}/send-rcs`, {
+
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ to: to.trim(), from: from || 'amex-hysa', messages: payloads })
@@ -37,7 +39,7 @@ export default function SendPanel({ steps, showToast }) {
 
     setStatus('error');
     setSending(false);
-    showToast('❌ server.js not running');
+    showToast('❌ Could not reach backend');
   };
 
   return (
