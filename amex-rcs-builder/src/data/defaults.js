@@ -21,9 +21,28 @@ export const STEP_DEFAULTS = {
     data: {
       cardWidth: 'MEDIUM',
       cards: [
-        { title: 'No Monthly Fees', description: 'No fee to open, no minimum deposit.', mediaUrl: '', mediaHeight: 'MEDIUM', suggestions: [{ text: 'Learn More', type: 'reply', value: 'more_no_fees' }] },
-        { title: 'Daily Compounding', description: 'Earn 4.35% APY. Interest compounds daily.', mediaUrl: '', mediaHeight: 'MEDIUM', suggestions: [{ text: 'Calculate', type: 'reply', value: 'start_calculator' }] }
-      ]
+          {
+            title: 'No Monthly Fees',
+            description: 'No fee to open, no minimum deposit. Ever.',
+            mediaUrl: 'https://image2.commarts.com/images1/1/1/7/9/971187_102_1160_NDgwMjYzNjY0MTAxNTc3NTg2OQ.jpg',
+            mediaHeight: 'MEDIUM',
+            suggestions: [{ text: 'Learn More', type: 'reply', value: 'more_no_fees' }]
+          },
+          {
+            title: 'Daily Compounding',
+            description: 'Earn 4.35% APY. Interest compounds daily and posts monthly.',
+            mediaUrl: 'https://images-cdn.ispot.tv/ad/OeuE/default-large.jpg',
+            mediaHeight: 'MEDIUM',
+            suggestions: [{ text: 'Calculate My Earnings', type: 'reply', value: 'start_calculator' }]
+          },
+          {
+            title: 'FDIC Insured',
+            description: 'Accounts offered by American Express National Bank. Member FDIC. Insured up to $250,000.',
+            mediaUrl: 'https://image.commarts.com/images1/1/1/7/9/971188_102_1160_NDgwMjYzNjY0MTQ1NTQwMjQxMw.jpg',
+            mediaHeight: 'MEDIUM',
+            suggestions: [{ text: 'Apply Now', type: 'url', value: 'https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/' }]
+          }
+        ]
     }
   },
   suggested_replies: {
