@@ -65,7 +65,7 @@ function StepCard({ step, index, total, selected, onSelect, onDelete, onMoveLeft
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        width: 180,
+        width: 260,
         flexShrink: 0,
         background: T.white,
         borderRadius: T.radius,
@@ -89,17 +89,17 @@ function StepCard({ step, index, total, selected, onSelect, onDelete, onMoveLeft
 
       {/* Image preview strip (rich card / carousel only) */}
       {imgUrl && (
-        <div style={{ height: 70, overflow: 'hidden', background: T.gray100 }}>
+        <div style={{ height: 100, overflow: 'hidden', background: T.gray100 }}>
           <img
             src={imgUrl} alt=""
-            style={{ width: '100%', height: 70, objectFit: 'cover' }}
+            style={{ width: '100%', height: 100, objectFit: 'cover' }}
             onError={e => e.target.style.display = 'none'}
           />
         </div>
       )}
       {!imgUrl && (step.type === 'standalone_card' || step.type === 'carousel') && (
         <div style={{
-          height: 60, background: `linear-gradient(135deg, ${meta.color}20, ${meta.color}10)`,
+          height: 90, background: `linear-gradient(135deg, ${meta.color}20, ${meta.color}10)`,
           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24,
         }}>
           {meta.icon}
@@ -111,7 +111,7 @@ function StepCard({ step, index, total, selected, onSelect, onDelete, onMoveLeft
         {/* Step number + type badge */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
           <span style={{
-            fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em',
+            fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em',
             color: meta.color, background: meta.bg, borderRadius: 99, padding: '2px 6px',
           }}>
             {meta.icon} {meta.label}
@@ -126,7 +126,7 @@ function StepCard({ step, index, total, selected, onSelect, onDelete, onMoveLeft
 
         {/* Title */}
         <div style={{
-          fontSize: 12, fontWeight: 600, color: T.gray800,
+          fontSize: 14, fontWeight: 600, color: T.gray800,
           lineHeight: 1.4, marginBottom: 3,
           display: '-webkit-box', WebkitLineClamp: 2,
           WebkitBoxOrient: 'vertical', overflow: 'hidden',
@@ -137,7 +137,7 @@ function StepCard({ step, index, total, selected, onSelect, onDelete, onMoveLeft
         {/* Subtitle */}
         {getStepSubtitle(step) && (
           <div style={{
-            fontSize: 10, color: T.gray400, lineHeight: 1.4,
+            fontSize: 12, color: T.gray400, lineHeight: 1.4,
             whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
           }}>
             {getStepSubtitle(step)}
@@ -149,7 +149,7 @@ function StepCard({ step, index, total, selected, onSelect, onDelete, onMoveLeft
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 3, marginTop: 7 }}>
             {sugs.slice(0, 2).map((s, i) => (
               <span key={i} style={{
-                fontSize: 9, fontWeight: 600, borderRadius: 99, padding: '2px 6px',
+                fontSize: 11, fontWeight: 600, borderRadius: 99, padding: '3px 8px',
                 background: s.type === 'reply' ? T.blueLight : T.yellowLight,
                 color: s.type === 'reply' ? T.blue : T.yellow,
                 border: `1px solid ${s.type === 'reply' ? T.blueMid : '#FDE68A'}`,

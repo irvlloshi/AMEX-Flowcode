@@ -69,7 +69,6 @@ export const STEP_DEFAULTS = {
 
 export const TEMPLATES = {
   welcome: [
-    { ...STEP_DEFAULTS.text, data: { text: '👋 Hi! Welcome to American Express. Ready to see how much your savings could grow?\n\nOur High Yield Savings Account offers competitive APY with no monthly fees and daily compounding interest.', suggestions: [] } },
     { ...STEP_DEFAULTS.carousel },
     { ...STEP_DEFAULTS.suggested_replies }
   ],
