@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { STEP_DEFAULTS, TEMPLATES } from './data/defaults';
-import { buildPayloads } from './utils/buildPayload';
 import AppHeader from './components/Header';
 import Palette from './components/Palette';
 import HorizontalCanvas from './components/HorizontalCanvas';
